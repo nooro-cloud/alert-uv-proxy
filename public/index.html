@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8"/>
-  <title>Alert Proxy</title>
-  <script src="/uv/uv.bundle.js"></script>
-  <script src="/uv/uv.config.js"></script>
-  <script src="/@titaniumnetwork-dev/ultraviolet/dist/sw.js"></script>
+<meta charset="UTF-8"/>
+<title>Alert Proxy</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:#0a0a0a;color:#f0f0f0;font-family:sans-serif;display:flex;align-items:center;justify-content:center;height:100vh;}
+</style>
 </head>
 <body>
 <script>
-  if ("serviceWorker" in navigator) {
-    navigator.serviceWorker.register("/uv/uv.sw.js", { scope: __uv$config.prefix }).then(() => {
-      location = __uv$config.prefix + __uv$config.encodeUrl(new URLSearchParams(location.search).get("url") || "https://google.com");
-    });
+  var url = new URLSearchParams(location.search).get('url');
+  if (url) {
+    location.replace('/proxy?url=' + encodeURIComponent(url));
   }
 </script>
 </body>
