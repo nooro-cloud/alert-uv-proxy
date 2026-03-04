@@ -9,6 +9,6 @@
 }
 ```
 
-Then in the Codespace terminal:
+No backticks, no extra text. Save it, then back in the terminal run:
 ```
-npm install && node server.js
+git reset --hard && git pull && npm install && node server.js
