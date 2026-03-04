@@ -1,0 +1,16 @@
+{
+  "name": "alert-proxy",
+  "version": "1.0.0",
+  "description": "Ultraviolet proxy for Alert",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@titaniumnetwork-dev/ultraviolet": "^3.2.5",
+    "@mercuryworkshop/bare-mux": "^2.0.6",
+    "bare-server-node": "^3.0.1",
+    "express": "^4.18.2",
+    "http-proxy-middleware": "^3.0.0"
+  }
+}
